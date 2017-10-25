@@ -1,12 +1,12 @@
 // business logic
 function translator(english) {
-
-  english = english.split('');
-  console.log(english);
+  var english = $("#english").val();
+  english = english.split(' ');
 // add way & ay
   for (var index = 0; index < english.length; index += 1){
     if (english[index].charAt(english[index].charAt(0)) == "a" || english[index].charAt(english[index].charAt(0)) == "e" || english[index].charAt(english[index].charAt(0)) == "i" || english[index].charAt(english[index].charAt(0)) == "o" || english[index].charAt(english[index].charAt(0)) =="u") {
       english[index] = english[index] + "way";
+
     }
       else {
       english[index] = english[index].concat(english[index].charAt(0));
@@ -14,9 +14,9 @@ function translator(english) {
       english[index] = english[index] + "ay";
     }
   }
-  english = english.join('');
+  english = english.join(' ');
   return english;
-    // convert back to string
+
 }
 
 
